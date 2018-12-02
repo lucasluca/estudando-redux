@@ -5,9 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { combineReducers, createStore } from 'redux'
 import { Provider } from 'react-redux'
+import inputTextReducer from "./inputTextReducer";
+
+// const reducers = combineReducers({
+//     field: () => ({ value : 'Ola mundo primeira chave criada no redux'})
+// })
 
 const reducers = combineReducers({
-    field: () => ({ value : 'Ola mundo primeira chave criada no redux'})
+    field: inputTextReducer
 })
 
 const store = createStore(reducers , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
